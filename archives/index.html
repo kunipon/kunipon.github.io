@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | Hexo</title>
+  <title>Archives | kunipooooooooooooon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="kunipooooooooooooon">
 <meta property="og:url" content="http://yoursite.com/archives/">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="kunipooooooooooooon">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="kunipooooooooooooon">
 <meta name="twitter:description">
 
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="kunipooooooooooooon" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -35,7 +35,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">kunipooooooooooooon</a>
       </h1>
       
     </div>
@@ -63,10 +63,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-gradle_install" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/12/20/hello-world/" class="article-date">
-  <time datetime="2014-12-20T04:32:38.000Z" itemprop="datePublished">Dec 20 2014</time>
+    <a href="/2015/01/14/gradle_install/" class="article-date">
+  <time datetime="2015-01-14T15:50:07.000Z" itemprop="datePublished">1月 14 2015</time>
 </a>
     
   </div>
@@ -77,7 +77,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/20/hello-world/">Hello World</a>
+      <a class="article-title" href="/2015/01/14/gradle_install/">gradleのインストール</a>
     </h1>
   
 
@@ -85,31 +85,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+        <p>ZIPファイルをダウンロード/展開してインストールすることもできるんですが、今回はGVMを利用してインストールしていきます。</p>
+<h2 id="GVMとは">GVMとは</h2>
+<p>the Groovy enVironment Managerの略らしいです。変なところで区切りますね。。。<br>それはともかく、GroovyやGrailsなど、いわゆるGroovyエコシステムに属するプロダクトのインストールやアップデートを一元的に行うためのツールです。GVMはGradleの導入だけではなく環境設定までをいい感じにやってくれるらしいんで、bashが使える環境なら是非とも利用しましょう。<br>More info: <a href="http://gvmtool.net" target="_blank" rel="external">GVMプロジェクト</a></p>
+<p>それでは、以下、手順になります。</p>
+<h3 id="1-GVMのインストール">1.GVMのインストール</h3>
+<p>プロジェクトのWebサイトからスクリプトをダウンロードして実行します。<br><strong>※curlインストールは必須です。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl <span class="operator">-s</span> get.gvmtool.net | bash</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>コマンドを実行すると以下の様なメッセージが出力されるかと思います。<br><img src="/2015/01/14/gradle_install/gvmtool.png" alt="インストール完了メッセージ"></p>
+<p>インストールが正常に完了しているか確認するために、gvmコマンドでバージョンの確認をしましょう。<br><strong>※bashの再起動が必要かもしれません。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvm -v</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<h3 id="2-gradleのインストール">2.gradleのインストール</h3>
+<p>gvmコマンドを使用してgradleをインストールします。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvm install gradle</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>コマンドを実行すると以下の様なメッセージが出力されるかと思います。<br><img src="/2015/01/14/gradle_install/gradleinstall.png" alt="インストール完了メッセージ"></p>
+<p>特定のバージョンのgradleをインストールしたい場合は、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvm list gradle</div></pre></td></tr></table></figure>
 
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<p>でインストール可能なバージョンの一覧を確認し、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvm install gradle &lt;version&gt;</div></pre></td></tr></table></figure>
+
+<p>のようにバージョンを指定してインストールできます。インストールしたgradleをデフォルトのバージョンにしたい場合は、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gvm default gradle &lt;version&gt;</div></pre></td></tr></table></figure>
+
+<p>で変更できます。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/12/20/hello-world/" data-id="x78ik30uchjvxwsv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/14/gradle_install/" data-id="xmdwniflerzuh1ac" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li></ul>
+
     </footer>
   </div>
   
@@ -125,14 +136,28 @@
     
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/gradle/" style="font-size: NaNpx;">gradle</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -144,7 +169,7 @@
       <ul>
         
           <li>
-            <a href="/2014/12/20/hello-world/">Hello World</a>
+            <a href="/2015/01/14/gradle_install/">gradleのインストール</a>
           </li>
         
       </ul>
@@ -159,7 +184,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2014 John Doe<br>
+      &copy; 2015 Kuniaki Kawasaki<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
